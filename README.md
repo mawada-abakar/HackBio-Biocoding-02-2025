@@ -2,11 +2,14 @@
 This project demonstrates how to store and display personal details using R in the HackBio Stage-0 Biocoding Internship.
 
 Steps to Follow:
+
   1.Set Up Your Environment
      Ensure R is installed on your system. If not, download and install it from CRAN.
      Optionally, install RStudio for an enhanced coding experience.
+     
  2.Define Your Personal Information
     Store your details as variables in R
+    
 # Define personal details
 name <- "Your Name"
 slack_username <- "@YourSlackUsername"
