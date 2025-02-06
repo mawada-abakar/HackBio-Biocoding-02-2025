@@ -29,6 +29,7 @@ preferred_language <- "R"
 # Display information
 personal_info <- data.frame(
   Field = c("Name", "Slack Username", "Email", "Hobby", "Country", "Discipline", "Preferred Programming Language"),
+  
   Value = c(name, slack_username, email, hobby, country, discipline, preferred_language)
 )
 
