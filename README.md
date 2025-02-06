@@ -11,12 +11,19 @@ Steps to Follow:
     Store your details as variables in R
     
 # Define personal details
+
 name <- "Your Name"
+
 slack_username <- "@YourSlackUsername"
+
 email <- "your.email@example.com"
+
 hobby <- "Your Hobby"
+
 country <- "Your Country"
+
 discipline <- "Your Discipline"
+
 preferred_language <- "R"
 
 # Display information
