@@ -130,9 +130,10 @@ distance <- hamming_distance(slack_username, twitter_handle)
 print(paste("Hamming Distance:", distance)) # Output : "Hamming Distance: 5"
 
 🤝 Contributing
-If you find any issues or improvements, feel free to submit a pull request or open an issue.
 
-Let me know if you need any modifications! 😊
+If you find any issues or improvements, feel free to submit a pull request or open an issue 😊.
+
+
 
 
 
