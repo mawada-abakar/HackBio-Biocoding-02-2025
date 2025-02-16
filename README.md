@@ -64,6 +64,7 @@ These scripts are designed to help with biological data analysis and computation
 # Scripts Overview
 
 1-Translating DNA to protein sequences
+
 This script converts a DNA sequence into a protein sequence using the standard genetic code.
 
 🔹 How it Works:
@@ -80,6 +81,7 @@ protein <- dna_to_protein(dna_sequence)
 print(protein)  # Output: "MAMIVMGRAKGA*"
 
 2-Logistic Growth Simulation & Growth Curves
+
 This script simulates and visualizes logistic growth curves for 100 different populations.
 
 🔹 How it Works:
@@ -95,6 +97,7 @@ growth_data <- generate_growth_data(100)
 head(growth_data)  # View first few rows
 
 3-Determining the time to reach 80% of carrying capacity
+
 This script determines the time when population growth reaches 80% of the carrying capacity (K) in a logistic model.
 
 🔹 How it Works:
@@ -110,6 +113,7 @@ time_80 <- time_to_80_percent(growth_curve)
 print(paste("Time to reach 80% of K:", time_80))
 
 4-Calculating Hamming distance between two strings
+
 This script calculates the Hamming distance between two strings (e.g., Slack username vs Twitter handle).
 
 🔹 How it Works:
