@@ -44,8 +44,11 @@ This repository contains solutions for Stage-1 of the HackBio Biocoding Internsh
 This repository contains four R scripts that perform various bioinformatics and computational tasks, including:
 
 1-Translating DNA to protein sequences
+
 2-Simulating and visualizing logistic growth curves
+
 3-Determining the time to reach 80% of carrying capacity
+
 4-Calculating Hamming distance between two strings
 
 These scripts are designed to help with biological data analysis and computational research in genomics and population modeling.
