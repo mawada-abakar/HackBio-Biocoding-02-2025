@@ -1,4 +1,6 @@
 # HackBio-Biocoding-02-2025
+
+# Stage-0
 This project demonstrates how to store and display personal details using R in the HackBio Stage-0 Biocoding Internship.
 
 Steps to Follow:
