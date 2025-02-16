@@ -1,1 +1,126 @@
+# Function: DNA to Protein Translation
+# This function takes a DNA sequence as input and returns the translated protein sequence.
 
+dna_to_protein <- function(dna_seq) {
+  # Define the genetic code as a named vector
+  genetic_code <- c(
+    "ATA" = "I", "ATC" = "I", "ATT" = "I", "ATG" = "M",
+    "ACA" = "T", "ACC" = "T", "ACG" = "T", "ACT" = "T",
+    "AAC" = "N", "AAT" = "N", "AAA" = "K", "AAG" = "K",
+    "AGC" = "S", "AGT" = "S", "AGA" = "R", "AGG" = "R",
+    "CTA" = "L", "CTC" = "L", "CTG" = "L", "CTT" = "L",
+    "CCA" = "P", "CCC" = "P", "CCG" = "P", "CCT" = "P",
+    "CAC" = "H", "CAT" = "H", "CAA" = "Q", "CAG" = "Q",
+    "CGA" = "R", "CGC" = "R", "CGG" = "R", "CGT" = "R",
+    "GTA" = "V", "GTC" = "V", "GTG" = "V", "GTT" = "V",
+    "GCA" = "A", "GCC" = "A", "GCG" = "A", "GCT" = "A",
+    "GAC" = "D", "GAT" = "D", "GAA" = "E", "GAG" = "E",
+    "GGA" = "G", "GGC" = "G", "GGG" = "G", "GGT" = "G",
+    "TCA" = "S", "TCC" = "S", "TCG" = "S", "TCT" = "S",
+    "TTC" = "F", "TTT" = "F", "TTA" = "L", "TTG" = "L",
+    "TAC" = "Y", "TAT" = "Y", "TAA" = "*", "TAG" = "*",
+    "TGC" = "C", "TGT" = "C", "TGA" = "*", "TGG" = "W"
+  )
+  
+  # Split DNA sequence into codons (triplets)
+  codons <- substring(dna_seq, seq(1, nchar(dna_seq), 3), seq(3, nchar(dna_seq), 3))
+  
+  # Translate codons into amino acids
+  protein_seq <- paste(genetic_code[codons], collapse = "")
+  
+  # Return protein sequence
+  return(protein_seq)
+}
+
+# Example Usage
+dna_sequence <- "ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG"
+protein_sequence <- dna_to_protein(dna_sequence)
+print(protein_sequence)  # Output: "MAMIVMGRAKGA*"
+
+#This function simulates a logistic growth model and generates 100 different growth curves.
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Function: Simulate Logistic Growth
+simulate_logistic_growth <- function(time, K = 100, r = 0.5, lag_min = 2, lag_max = 6, exp_min = 5, exp_max = 10) {
+  # Randomize lag and exponential phases
+  lag_phase <- sample(lag_min:lag_max, 1)
+  exp_phase <- sample(exp_min:exp_max, 1)
+  
+  # Logistic growth equation
+  growth <- K / (1 + ((K - 1) / 1) * exp(-r * (time - lag_phase)))
+  
+  # Keep population constant during the lag phase
+  growth[time < lag_phase] <- 1  
+  return(data.frame(Time = time, Population = growth))
+}
+
+# Function: Generate 100 different growth curves
+generate_growth_data <- function(n = 100) {
+  time <- seq(0, 50, 1)  # Time points from 0 to 50
+  growth_data <- do.call(rbind, lapply(1:n, function(i) {
+    curve <- simulate_logistic_growth(time)
+    curve$Curve_ID <- i  # Assign a unique ID to each curve
+    return(curve)
+  }))
+  return(growth_data)
+}
+
+# Generate and view the data frame
+growth_dataset <- generate_growth_data(100)
+head(growth_dataset)
+
+# Plot a subset of the growth curves
+ggplot(growth_dataset %>% filter(Curve_ID <= 10), aes(x = Time, y = Population, group = Curve_ID, color = as.factor(Curve_ID))) +
+  geom_line() +
+  theme_minimal() +
+  labs(title = "Simulated Logistic Growth Curves", x = "Time", y = "Population Size", color = "Curve ID")
+
+#This function determines the time when a population reaches 80% of its carrying capacity (K).
+# Function: Find Time to Reach 80% of Carrying Capacity
+time_to_80_percent <- function(growth_data, K = 100) {
+  threshold <- 0.8 * K  # 80% of carrying capacity
+  
+  # Find the first time point where the population reaches a threshold
+  time_80 <- growth_data$Time[growth_data$Population >= threshold][1]
+  
+  return(time_80)
+}
+
+# Example Usage:
+time <- seq(0, 50, 1)
+growth_curve <- simulate_logistic_growth(time)
+time_80 <- time_to_80_percent(growth_curve)
+
+print(paste("Time to reach 80% of K:", time_80))
+
+#This function computes the Hamming distance between two strings.
+# Function: Compute Hamming Distance
+hamming_distance <- function(str1, str2) {
+  len1 <- nchar(str1)
+  len2 <- nchar(str2)
+  
+  # Pad the shorter string with spaces to match the length
+  if (len1 > len2) {
+    str2 <- paste(str2, paste(rep(" ", len1 - len2), collapse=""), sep="")
+  } else if (len2 > len1) {
+    str1 <- paste(str1, paste(rep(" ", len2 - len1), collapse=""), sep="")
+  }
+  
+  # Convert strings to character vectors
+  str1_chars <- unlist(strsplit(str1, ""))
+  str2_chars <- unlist(strsplit(str2, ""))
+  
+  # Count the number of different characters
+  distance <- sum(str1_chars != str2_chars)
+  
+  return(distance)
+}
+
+# Example Usage:
+slack_username <- "BioCoder123"
+twitter_handle <- "BioDevGuy"
+distance <- hamming_distance(slack_username, twitter_handle)
+
+print(paste("Hamming Distance:", distance))
