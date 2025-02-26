@@ -137,6 +137,7 @@ If you find any issues or improvements, feel free to submit a pull request or op
 # Stage-2
 This repository contains solutions for Stage-2 of the HackBio Biocoding Internship, implemented entirely in R. Each task includes a brief explanation and the R code used to solve it.
 
+
 1-Microbiology Task
 This task requires analyzing a microbiology dataset containing Optical Density (OD600) measurements over Time for different bacterial strains under two conditions:
 
@@ -167,6 +168,7 @@ Knock-in (+): A gene is inserted/activated.
 
 5-Perform statistical tests (e.g., t-tests) to analyze differences.
 
+
 2-Botany and Plant Science Task
 This task requires analyzing a dataset describing scientists engineering mutants in a crop to improve pesticide resistance. They measured metabolic responses in both wild-type (WT) and mutants after 8 hours and 24 hours, comparing them to a DMSO (control) treatment.
 
@@ -193,6 +195,7 @@ This task requires analyzing a dataset describing scientists engineering mutants
 5-Compute residuals and categorize metabolites.
 6-Highlight significant metabolites and analyze their trends.
 7-Create a Line Plot for Selected Metabolites
+
 
 3-Biochemistry and Oncology Task
 This task involves analyzing the functional and structural impact of amino acid mutations on protein stability and function using two datasets:
