@@ -139,6 +139,7 @@ This repository contains solutions for Stage-2 of the HackBio Biocoding Internsh
 
 
 1-Microbiology Task
+
 This task requires analyzing a microbiology dataset containing Optical Density (OD600) measurements over Time for different bacterial strains under two conditions:
 
 Knock-out (-): A gene is deleted/inactivated.
@@ -170,6 +171,7 @@ Knock-in (+): A gene is inserted/activated.
 
 
 2-Botany and Plant Science Task
+
 This task requires analyzing a dataset describing scientists engineering mutants in a crop to improve pesticide resistance. They measured metabolic responses in both wild-type (WT) and mutants after 8 hours and 24 hours, comparing them to a DMSO (control) treatment.
 
 🔹Objective:
@@ -198,6 +200,7 @@ This task requires analyzing a dataset describing scientists engineering mutants
 
 
 3-Biochemistry and Oncology Task
+
 This task involves analyzing the functional and structural impact of amino acid mutations on protein stability and function using two datasets:
 
 1-SIFT Dataset (Functional Impact): Measures how amino acid substitutions affect protein function.
