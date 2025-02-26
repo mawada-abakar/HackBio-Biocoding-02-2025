@@ -170,6 +170,7 @@ Knock-in (+): A gene is inserted/activated.
 5-Perform statistical tests (e.g., t-tests) to analyze differences.
 
 
+
 2-Botany and Plant Science Task
 
 This task requires analyzing a dataset describing scientists engineering mutants in a crop to improve pesticide resistance. They measured metabolic responses in both wild-type (WT) and mutants after 8 hours and 24 hours, comparing them to a DMSO (control) treatment.
@@ -197,6 +198,7 @@ This task requires analyzing a dataset describing scientists engineering mutants
 5-Compute residuals and categorize metabolites.
 6-Highlight significant metabolites and analyze their trends.
 7-Create a Line Plot for Selected Metabolites
+
 
 
 3-Biochemistry and Oncology Task
