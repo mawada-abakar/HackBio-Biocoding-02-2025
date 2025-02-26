@@ -192,11 +192,17 @@ This task requires analyzing a dataset describing scientists engineering mutants
 🔹Solution Approach:
 
 1-Load and Inspect the Data
+
 2-Compute ΔM (Difference in Metabolic Response)
+
 3-Create a Scatter Plot Comparing WT vs Mutant ΔM
+
 4-Fit a reference Line with y = x
+
 5-Compute residuals and categorize metabolites.
+
 6-Highlight significant metabolites and analyze their trends.
+
 7-Create a Line Plot for Selected Metabolites
 
 
@@ -224,13 +230,21 @@ FoldX Score > 2 kCal/mol → Deleterious mutation.
 🔹Solution Approach:
 
 1-Load and Inspect the Data
+
 2-Create a specific Protein_ Amino Acid column
+
 3-Merge SIFT and FoldX Datasets
+
 4-Filter Deleterious Mutations
+
 5-Extract First Amino Acid from Mutation
+
 6-Generate Frequency Table
+
 7-visualize amino acid impacts using Bar Plot and pie plot
+
 8-Identify Amino Acid with Highest Impact
+
 9-Analyze Amino Acids with >100 Occurrences
 
 
