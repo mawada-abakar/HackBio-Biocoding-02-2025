@@ -134,6 +134,96 @@ print(paste("Hamming Distance:", distance)) # Output : "Hamming Distance: 5"
 If you find any issues or improvements, feel free to submit a pull request or open an issue 😊.
 
 
+#Stage 2
+This repository contains solutions for Stage-2 of the HackBio Biocoding Internship, implemented entirely in R. Each task includes a brief explanation and the R code used to solve it.
+
+1-Microbiology Task
+This task requires analyzing a microbiology dataset containing Optical Density (OD600) measurements over Time for different bacterial strains under two conditions:
+
+Knock-out (-): A gene is deleted/inactivated.
+Knock-in (+): A gene is inserted/activated.
+
+🔹Objective:
+
+-Plot growth curves (OD600 vs Time) for different strains.
+
+-Compare knock-out (-) and knock-in (+) strains.
+
+-Determine the time to reach carrying capacity.
+
+-Generate scatter and box plots for carrying capacity times.
+
+-Conduct statistical analysis to compare knock-out and knock-in strains.
+
+🔹Solution Approach:
+
+1-Load and process the dataset.
+
+2-Generate growth curves using ggplot2.
+
+3-Use logistic growth modeling to determine carrying capacity times.
+
+4-Generate scatter and box plots for comparisons.
+
+5-Perform statistical tests (e.g., t-tests) to analyze differences.
+
+2-Botany and Plant Science Task
+This task requires analyzing a dataset describing scientists engineering mutants in a crop to improve pesticide resistance. They measured metabolic responses in both wild-type (WT) and mutants after 8 hours and 24 hours, comparing them to a DMSO (control) treatment.
+
+🔹Objective:
+
+-Compute the difference in metabolic response (ΔM) for wild type and mutant plants.
+
+-Create a scatter plot for ΔM.
+
+-Fit a reference line (y = x).
+
+-Compute residuals and categorize metabolites.
+
+-Highlight significant metabolites and analyze their trends.
+
+-Plot metabolic response over time for selected metabolites.
+
+🔹Solution Approach:
+
+1-Load and Inspect the Data
+2-Compute ΔM (Difference in Metabolic Response)
+3-Create a Scatter Plot Comparing WT vs Mutant ΔM
+4-Fit a reference Line with y = x
+5-Compute residuals and categorize metabolites.
+6-Highlight significant metabolites and analyze their trends.
+7-Create a Line Plot for Selected Metabolites
+
+3-Biochemistry and Oncology Task
+This task involves analyzing the functional and structural impact of amino acid mutations on protein stability and function using two datasets:
+
+1-SIFT Dataset (Functional Impact): Measures how amino acid substitutions affect protein function.
+SIFT Score < 0.05 → Deleterious mutation.
+
+2-FoldX Dataset (Structural Impact): Measures the effect of amino acid substitutions on protein stability (energy changes in kCal/mol).
+FoldX Score > 2 kCal/mol → Deleterious mutation.
+
+🔹Objective:
+
+-Merge SIFT and FoldX datasets using a common identifier.
+
+-Identify mutations affecting both structure and function.
+
+-Determine the amino acid with the highest impact.
+
+-Generate a frequency table and visualize amino acid impacts.
+
+🔹Solution Approach:
+
+1-Load and Inspect the Data
+2-Create a specific Protein_ Amino Acid column
+3-Merge SIFT and FoldX Datasets
+4-Filter Deleterious Mutations
+5-Extract First Amino Acid from Mutation
+6-Generate Frequency Table
+7-visualize amino acid impacts using Bar Plot and pie plot
+8-Identify Amino Acid with Highest Impact
+9-Analyze Amino Acids with >100 Occurrences
 
 
 
