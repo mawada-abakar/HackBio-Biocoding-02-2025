@@ -134,7 +134,7 @@ print(paste("Hamming Distance:", distance)) # Output : "Hamming Distance: 5"
 If you find any issues or improvements, feel free to submit a pull request or open an issue 😊.
 
 
-#Stage 2
+# Stage-2
 This repository contains solutions for Stage-2 of the HackBio Biocoding Internship, implemented entirely in R. Each task includes a brief explanation and the R code used to solve it.
 
 1-Microbiology Task
