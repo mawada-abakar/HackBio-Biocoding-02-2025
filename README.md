@@ -248,4 +248,67 @@ FoldX Score > 2 kCal/mol → Deleterious mutation.
 9-Analyze Amino Acids with >100 Occurrences
 
 
+4-Transcriptomics Task
+
+This task involves analyzing an RNA-seq dataset where gene expression changes are quantified as Log2 Fold Change (Log2FC) and their statistical significance is measured using p-values. The dataset contains information comparing a diseased cell line to a diseased cell line treated with compound X.
+
+🔹Objective:
+
+-Generate a volcano plot for gene expression.
+
+-Identify upregulated and downregulated genes.
+
+-Investigate the biological functions of top differentially expressed genes.
+
+🔹Solution Approach:
+
+1-Loading the Dataset
+
+2-Generating the Volcano Plot
+
+3-Identifying Differentially Expressed Genes
+
+4-Investigating Gene Functions
+
+
+5-Public Health Task
+
+This task involves analyzing NHANES dataset a public health dataset collected by the CDC, containing survey responses, medical examinations, and laboratory test results from a representative sample of the U.S. population.
+
+🔹Objective:
+
+-Process missing values in the NHANES dataset.
+
+-Visualize distributions of health metrics.
+
+-Calculate basic statistics (mean, variance, standard deviation, range).
+
+-Analyze relationships between variables with scatter plots.
+
+-Perform t-tests to explore statistical significance.
+
+🔹Solution Approach:
+
+1-Loading the Dataset
+
+2-Handling Missing Values
+
+3-Visualizing Data Distributions using histogram
+
+4-Calculate summary statistics (mean, variance, standard deviation, range)
+
+5-Exploring Relationships between variables using Scatterplot
+
+6-Performing T-tests 
+
+
+🤝 Contributing
+
+If you find any issues or improvements, feel free to submit a pull request or open an issue 😊.
+
+
+
+
+ 
+
 
