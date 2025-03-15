@@ -309,7 +309,7 @@ If you find any issues or improvements, feel free to submit a pull request or op
 
 
 # Stage-3
-# Drug Discovery: Chemical Space Analysis & Docking Score Prediction
+# Drug Discovery: Machine Learning for Docking Score Prediction & Chemical Space Analysis
 
 This project analyzes chemical descriptor data of ~95,000 small molecules to identify clusters of compounds with strong binding affinity to the protein adenosine deaminase (ada). The workflow includes PCA/K-means clustering for chemical space visualization and regression modeling to predict docking scores.
 
