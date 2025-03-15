@@ -54,6 +54,7 @@ This repository contains four R scripts that perform various bioinformatics and 
 These scripts are designed to help with biological data analysis and computational research in genomics and population modeling.
 
  #Installation & Setup
+ 
  -Install R (if not already installed)
     Download and install R from CRAN.
 
@@ -63,7 +64,7 @@ These scripts are designed to help with biological data analysis and computation
 
 # Scripts Overview
 
-1-Translating DNA to protein sequences
+# 1-Translating DNA to protein sequences
 
 This script converts a DNA sequence into a protein sequence using the standard genetic code.
 
@@ -80,7 +81,7 @@ dna_sequence <- "ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG"
 protein <- dna_to_protein(dna_sequence)
 print(protein)  # Output: "MAMIVMGRAKGA*"
 
-2-Logistic Growth Simulation & Growth Curves
+# 2-Logistic Growth Simulation & Growth Curves
 
 This script simulates and visualizes logistic growth curves for 100 different populations.
 
@@ -96,7 +97,7 @@ source("logistic_growth.R")
 growth_data <- generate_growth_data(100)
 head(growth_data)  # View first few rows
 
-3-Determining the time to reach 80% of carrying capacity
+# 3-Determining the time to reach 80% of carrying capacity
 
 This script determines the time when population growth reaches 80% of the carrying capacity (K) in a logistic model.
 
@@ -112,7 +113,7 @@ growth_curve <- simulate_logistic_growth(time)
 time_80 <- time_to_80_percent(growth_curve)
 print(paste("Time to reach 80% of K:", time_80))
 
-4-Calculating Hamming distance between two strings
+# 4-Calculating Hamming distance between two strings
 
 This script calculates the Hamming distance between two strings (e.g., Slack username vs Twitter handle).
 
@@ -138,7 +139,7 @@ If you find any issues or improvements, feel free to submit a pull request or op
 This repository contains solutions for Stage-2 of the HackBio Biocoding Internship, implemented entirely in R. Each task includes a brief explanation and the R code used to solve it.
 
 
-1-Microbiology Task
+# 1-Microbiology Task
 
 This task requires analyzing a microbiology dataset containing Optical Density (OD600) measurements over Time for different bacterial strains under two conditions:
 
@@ -171,7 +172,7 @@ Knock-in (+): A gene is inserted/activated.
 
 
 
-2-Botany and Plant Science Task
+# 2-Botany and Plant Science Task
 
 This task requires analyzing a dataset describing scientists engineering mutants in a crop to improve pesticide resistance. They measured metabolic responses in both wild-type (WT) and mutants after 8 hours and 24 hours, comparing them to a DMSO (control) treatment.
 
@@ -207,7 +208,7 @@ This task requires analyzing a dataset describing scientists engineering mutants
 
 
 
-3-Biochemistry and Oncology Task
+# 3-Biochemistry and Oncology Task
 
 This task involves analyzing the functional and structural impact of amino acid mutations on protein stability and function using two datasets:
 
@@ -248,7 +249,7 @@ FoldX Score > 2 kCal/mol → Deleterious mutation.
 9-Analyze Amino Acids with >100 Occurrences
 
 
-4-Transcriptomics Task
+# 4-Transcriptomics Task
 
 This task involves analyzing an RNA-seq dataset where gene expression changes are quantified as Log2 Fold Change (Log2FC) and their statistical significance is measured using p-values. The dataset contains information comparing a diseased cell line to a diseased cell line treated with compound X.
 
@@ -258,7 +259,7 @@ This task involves analyzing an RNA-seq dataset where gene expression changes ar
 
 -Identify upregulated and downregulated genes.
 
--Investigate the biological functions of top differentially expressed genes.
+-Investigate the biological functions of the top differentially expressed genes.
 
 🔹Solution Approach:
 
@@ -271,7 +272,7 @@ This task involves analyzing an RNA-seq dataset where gene expression changes ar
 4-Investigating Gene Functions
 
 
-5-Public Health Task
+# 5-Public Health Task
 
 This task involves analyzing NHANES dataset a public health dataset collected by the CDC, containing survey responses, medical examinations, and laboratory test results from a representative sample of the U.S. population.
 
@@ -305,6 +306,54 @@ This task involves analyzing NHANES dataset a public health dataset collected by
 🤝 Contributing
 
 If you find any issues or improvements, feel free to submit a pull request or open an issue 😊.
+
+
+# Stage-3
+# Drug Discovery: Chemical Space Analysis & Docking Score Prediction
+
+This project analyzes chemical descriptor data of ~95,000 small molecules to identify clusters of compounds with strong binding affinity to the protein adenosine deaminase (ada). The workflow includes PCA/K-means clustering for chemical space visualization and regression modeling to predict docking scores.
+
+#Installation & Setup
+ 
+ -Install R (if not already installed)
+    Download and install R from CRAN.
+
+ -Install Required R Packages
+    Some scripts use additional libraries. Install them using:
+   install.packages(c("tidyverse", "factoextra", "caret", "randomForest"))
+
+   # Step-by-Step Workflow
+
+   1. Load and Preprocess the Data:
+      
+       Clean the dataset and prepare features for analysis.
+      
+   3. Principal Component Analysis (PCA):
+
+      Reduce dimensionality to visualize chemical space.
+
+   5. K-means Clustering:
+
+      Group compounds into clusters based on chemical similarity.
+
+   4. Visualize Chemical Space:
+      
+       Plot clusters and color by docking scores.
+
+   5. Identify Clusters with Low Docking Scores:
+      
+      Find clusters enriched in compounds with strong binding (low scores).
+
+   6. Predict Docking Scores with Regression:
+
+      Train a model to predict docking scores using chemical features.
+
+
+  🤝 Contributing
+
+  This workflow identifies promising compounds for ada targeting and links chemical features to binding affinity. If you find any issues or improvements, feel free to submit a pull request or open an issue 😊.
+
+
 
 
 
